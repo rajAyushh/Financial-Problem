@@ -24,4 +24,19 @@ class rupeeCOINTransaction {
     ).toString();
   }
 }
+computeTransactionHash() {
+    return SHA256(
+      this.sender +
+        "sent" +
+        this.recipient +
+        +this.quantity +
+        "rupeeCOIN at" +
+        this.interestRate +
+        "on" +
+        this.timestamp +
+        "txnID" +
+        this.txnId
+    ).toString();
+  }
 let txn = new rupeeCOINTransaction();
+module.exports = { rupeeCOINTransaction };
