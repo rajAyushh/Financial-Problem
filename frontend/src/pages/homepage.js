@@ -17,7 +17,6 @@ import Divider from '@mui/material/Divider';
 import { useNavigate, Link } from 'react-router-dom';
 
 
-
 const mdTheme = createTheme({
   palette: {
     primary: {
@@ -96,7 +95,16 @@ export default function HomePage() {
     </Paper>
     <Grid container>
     <Divider/>
-    <Card sx={{ maxWidth: 345, margin: 5 }} onClick={openBorrow}>
+    <Card sx={{ 
+  maxWidth: 345, 
+  margin: 5, 
+  boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)', 
+  transition: 'transform 0.3s', 
+  '&:hover': {
+    transform: 'scale(1.05)',
+    boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
+  }
+}} onClick={openBorrow}>
       <CardActionArea >
         <CardMedia
           component="img"
@@ -114,7 +122,16 @@ export default function HomePage() {
         </CardContent>
       </CardActionArea>
     </Card>
-    <Card sx={{ maxWidth: 345, margin: 5 }} onClick={openLend}>
+    <Card sx={{ 
+  maxWidth: 345, 
+  margin: 5, 
+  boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)', 
+  transition: 'transform 0.3s', 
+  '&:hover': {
+    transform: 'scale(1.05)',
+    boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
+  }
+}} onClick={openBorrow}>
       <CardActionArea>
         <CardMedia
           component="img"

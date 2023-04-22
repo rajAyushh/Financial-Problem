@@ -12,8 +12,11 @@ import Work from './pages/work';
 import Contact from './pages/contact';
 import Profile from './pages/profile'
 import EMI from './pages/emi'
-
-
+const bgImage = new Image();
+bgImage.src = 'C:\Users\harsh\Desktop\Financial-Problem\frontend\src\resources\img.jpg';
+bgImage.addEventListener('load', () => {
+  document.body.style.backgroundImage = `url(${bgImage.src})`;
+});
 function App() {
   return (
     <div className="App">

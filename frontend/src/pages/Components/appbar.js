@@ -77,7 +77,7 @@ function ResponsiveAppBar() {
   }
 
   return (
-    <AppBar>
+    <AppBar sx={{ backgroundColor: '#0B2447' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <PaidRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -156,43 +156,95 @@ function ResponsiveAppBar() {
           </Typography> */}
           <Box sx={{ flexGrow: 1, display: { xs: '10', md: 'flex' } }}>
             <Button
-                onClick={openLend}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Lend money
+              onClick={openLend}
+              sx={{
+                my: 2,
+                color: 'white',
+                display: 'block',
+                backgroundColor: '#0B2447',
+                '&:hover': {
+                  backgroundColor: '#005ea8',
+                },
+              }}
+            >
+              Lend money
+            </Button>
+
+
+
+
+            <Button
+              onClick={openLend}
+              sx={{
+                my: 2,
+                color: 'white',
+                display: 'block',
+                backgroundColor: '#0B2447',
+                '&:hover': {
+                  backgroundColor: '#005ea8',
+                },
+              }}
+            >
+              Borrow money
             </Button>
             <Button
-                onClick={openBorrow}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Borrow money
-            </Button>
-            <Button
-                onClick={openBuycoin}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Buy Rcoin
+              onClick={openLend}
+              sx={{
+                my: 2,
+                color: 'white',
+                display: 'block',
+                backgroundColor: '#0B2447',
+                '&:hover': {
+                  backgroundColor: '#005ea8',
+                },
+              }}
+            >
+              Buy Rcoin
             </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0, display: { xs: '10', md: 'flex' } }}>
             <Button
-                onClick={openDashboard}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Dashboard
+              onClick={openLend}
+              sx={{
+                my: 2,
+                color: 'white',
+                display: 'block',
+                backgroundColor: '#0B2447',
+                '&:hover': {
+                  backgroundColor: '#005ea8',
+                },
+              }}
+            >
+              Dashboard
             </Button>
             <Button
-                onClick={openWork}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                How we Work
+              onClick={openLend}
+              sx={{
+                my: 2,
+                color: 'white',
+                display: 'block',
+                backgroundColor: '#0B2447',
+                '&:hover': {
+                  backgroundColor: '#005ea8',
+                },
+              }}
+            >
+              How we Work
             </Button>
             <Button
-                onClick={openContact}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                Contact Us
+              onClick={openLend}
+              sx={{
+                my: 2,
+                color: 'white',
+                display: 'block',
+                backgroundColor: '#0B2447',
+                '&:hover': {
+                  backgroundColor: '#005ea8',
+                },
+              }}
+            >
+              Contact Us
             </Button>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 2 }}>
@@ -216,14 +268,14 @@ function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               <MenuItem>
-                  <Typography textAlign="center">User: #ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad</Typography>
-                </MenuItem>
-                <MenuItem onClick={openWallet}>
-                  <Typography textAlign="center">Profile</Typography>
-                </MenuItem>
-                <MenuItem onClick={logOut}>
-                  <Typography textAlign="center">Log Out</Typography>
-                </MenuItem>
+                <Typography textAlign="center">User: #ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad</Typography>
+              </MenuItem>
+              <MenuItem onClick={openWallet}>
+                <Typography textAlign="center">Profile</Typography>
+              </MenuItem>
+              <MenuItem onClick={logOut}>
+                <Typography textAlign="center">Log Out</Typography>
+              </MenuItem>
               {/* {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
