@@ -6,7 +6,8 @@ var Schema = mongoose.Schema;
 var transactionSchema = new Schema(
   {
     txnId: {
-      type: mongoose.Schema.Types.String,
+      type: mongoose.Schema.Types.Number,
+      default: 0,
     },
     sender: {
       type: mongoose.Schema.Types.String,

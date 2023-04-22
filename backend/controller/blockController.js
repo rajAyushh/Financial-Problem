@@ -1,4 +1,7 @@
 const { Block } = require('../models/blocksModel')
+const SHA256 = require("crypto-js/sha256");
+const { MerkleTree } = require("merkletreejs");
+const { Transaction } = require("../models/transactionModel");
 
 exports.viewAllBlocks = async(req,res,next) => {
     result = await Block.find()
