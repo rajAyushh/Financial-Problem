@@ -1,18 +1,18 @@
-const mongoose = require('mongoose')
-const db = "mongodb+srv://ashwin:Atlas0512@cluster0.2z2fuz5.mongodb.net/CryptoLender?retryWrites=true&w=majority"
-
+const mongoose = require("mongoose");
+const db =
+  "mongodb+srv://Raju:1ilmXbwwk5UPXCxR@financialproblem.l7dtsdc.mongodb.net/test";
 async function connectDB() {
   try {
     await mongoose.connect(db, {
       useNewUrlParser: true,
-      useUnifiedTopology: true
-    })
+      useUnifiedTopology: true,
+    });
 
-    console.log('MongoDB Atlas connected...')
+    console.log("MongoDB Atlas connected...");
   } catch (error) {
-    console.error(error.message)
-    process.exit(1)
+    console.error(error.message);
+    process.exit(1);
   }
 }
 
-module.exports = connectDB
+module.exports = connectDB;
