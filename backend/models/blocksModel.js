@@ -27,7 +27,7 @@ var blockSchema = new Schema(
     },
     difficulty: {
       type: mongoose.Schema.Types.Number,
-      default: 0,
+      default: 2,
     },
     timestamp: {
       type: mongoose.Schema.Types.Number,
