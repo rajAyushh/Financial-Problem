@@ -131,7 +131,7 @@ export default function HomePage() {
     transform: 'scale(1.05)',
     boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
   }
-}} onClick={openBorrow}>
+}} onClick={openLend}>
       <CardActionArea>
         <CardMedia
           component="img"
