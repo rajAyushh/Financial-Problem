@@ -174,7 +174,7 @@ function ResponsiveAppBar() {
 
 
             <Button
-              onClick={openLend}
+              onClick={openBorrow}
               sx={{
                 my: 2,
                 color: 'white',
@@ -188,7 +188,7 @@ function ResponsiveAppBar() {
               Borrow money
             </Button>
             <Button
-              onClick={openLend}
+             onClick={openBuycoin}
               sx={{
                 my: 2,
                 color: 'white',
@@ -219,7 +219,7 @@ function ResponsiveAppBar() {
               Dashboard
             </Button>
             <Button
-              onClick={openLend}
+             onClick={openWork}
               sx={{
                 my: 2,
                 color: 'white',
@@ -229,11 +229,12 @@ function ResponsiveAppBar() {
                   backgroundColor: '#005ea8',
                 },
               }}
+            
             >
               How we Work
             </Button>
             <Button
-              onClick={openLend}
+              onClick={openContact}
               sx={{
                 my: 2,
                 color: 'white',
