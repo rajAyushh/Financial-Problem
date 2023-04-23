@@ -12,6 +12,8 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import working from '../resources/working.jpg'
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 
 const mdTheme = createTheme({
   palette: {
@@ -33,37 +35,32 @@ export default function Login() {
   const [pubKey, setPubKey] = React.useState()
   const [priKey, setPriKey] = React.useState()
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const data = new FormData(event.currentTarget);
-  //   console.log({
-  //     email: data.get('email'),
-  //     password: data.get('password'),
-  //   });
-  // };
-
   const handleKeyChange = (e) => {
-    if(e.target.name == 'publickey') {
+    if(e.target.name === 'publickey') {
       setPubKey(e.target.value)
     }  
-    if(e.target.name == 'privatekey') {
+    if(e.target.name === 'privatekey') {
       setPriKey(e.target.value)
     }
   }
 
   const hanldeLogin = (event) => {
-    // const data = new FormData(event.currentTarget);
-    // console.log(priKey)
-    // console.log(pubKey)
-    // if((pubKey === '833dee5') && (priKey === '6159bc7')) {
-    //   alert("Correct")
-    //   console.log('correct')
-    // } else {
-    //   alert("maa chuda")
-    //   console.log('incorrect')
-    // }
     navigate('/')
   }
+
+axios
+  .post("http://localhost:8080/login", {
+    publicKey: pubKey,
+    privateKeyHash: priKey,
+  })
+  .then(
+    (response) => {
+      console.log(response);
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
 
   return (
     <ThemeProvider theme={mdTheme}>

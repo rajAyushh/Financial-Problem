@@ -12,10 +12,10 @@ import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea } from '@mui/material';
 import lender from '../resources/give.jpg';
 import borrow from '../resources/loan.jpg';
-import doggo from '../resources/doggo.jpg';
+import img from '../resources/img.jpg';
 import Divider from '@mui/material/Divider';
 import { useNavigate, Link } from 'react-router-dom';
-
+import './home.css' ; 
 
 const mdTheme = createTheme({
   palette: {
