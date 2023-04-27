@@ -56,7 +56,10 @@ exports.addBlockDetails = async(req,res,next) => {
     console.error("Error: Query did not return at least two documents.");
   }
     var once = 0;
-    reqBody.difficulty = 2;
+    if (reqBody.difficulty === undefined) {
+      reqBody.difficulty = 1;
+    }
+    
     while (
       SHA256(
         reqBody.height +

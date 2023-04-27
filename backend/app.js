@@ -4,6 +4,11 @@ const express = require('express')
 const cors = require('cors')
 
 const connectDB = require('./db')
+const { connect } = require('./start/router')
+const gridPeakPrice = 4;
+const peerPeekPrice = 3;
+const gridOffPeakPrice = 2;
+const peerOffPeakPrice = 1;
 
 console.log("Connecting to DB...")
 connectDB()

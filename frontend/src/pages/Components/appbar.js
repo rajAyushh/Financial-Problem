@@ -1,19 +1,19 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import PaidRoundedIcon from '@mui/icons-material/PaidRounded';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import { useNavigate } from 'react-router-dom';
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import PaidRoundedIcon from "@mui/icons-material/PaidRounded";
+import Container from "@mui/material/Container";
+import Avatar from "@mui/material/Avatar";
+import Button from "@mui/material/Button";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import { useNavigate } from "react-router-dom";
 
-const settings = ['Profile', 'Dashboard', 'Logout'];
+const settings = ["Profile", "Dashboard", "Logout"];
 
 function ResponsiveAppBar() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -31,56 +31,58 @@ function ResponsiveAppBar() {
   function openLend(event) {
     event.preventDefault();
 
-    navigate('/listing');
+    navigate("/listing");
   }
 
   function openBorrow(event) {
     event.preventDefault();
 
-    navigate('/borrow');
+    navigate("/borrow");
   }
 
   function openBuycoin(event) {
     event.preventDefault();
 
-    navigate('/convert');
+    navigate("/convert");
   }
 
   function openDashboard(event) {
     event.preventDefault();
 
-    navigate('/dashboard');
+    navigate("/dashboard");
   }
 
   function openWork(event) {
     event.preventDefault();
 
-    navigate('/work');
+    navigate("/work");
   }
 
   function openContact(event) {
     event.preventDefault();
 
-    navigate('/contact');
+    navigate("/contact");
   }
 
   function openWallet(event) {
     event.preventDefault();
 
-    navigate('/profile');
+    navigate("/profile");
   }
 
   function logOut(event) {
     event.preventDefault();
 
-    navigate('/login');
+    navigate("/login");
   }
 
   return (
-    <AppBar sx={{ backgroundColor: '#0B2447' }}>
+    <AppBar sx={{ backgroundColor: "#0B2447" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <PaidRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <PaidRoundedIcon
+            sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -88,12 +90,12 @@ function ResponsiveAppBar() {
             href="/"
             sx={{
               mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              display: { xs: "none", md: "flex" },
+              fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
+              letterSpacing: ".3rem",
+              color: "inherit",
+              textDecoration: "none",
             }}
           >
             P2P
@@ -154,48 +156,45 @@ function ResponsiveAppBar() {
           >
             LOGO
           </Typography> */}
-          <Box sx={{ flexGrow: 1, display: { xs: '10', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "10", md: "flex" } }}>
             <Button
               onClick={openLend}
               sx={{
                 my: 2,
-                color: 'white',
-                display: 'block',
-                backgroundColor: '#0B2447',
-                '&:hover': {
-                  backgroundColor: '#005ea8',
+                color: "white",
+                display: "block",
+                backgroundColor: "#0B2447",
+                "&:hover": {
+                  backgroundColor: "#005ea8",
                 },
               }}
             >
               Lend money
             </Button>
 
-
-
-
             <Button
               onClick={openBorrow}
               sx={{
                 my: 2,
-                color: 'white',
-                display: 'block',
-                backgroundColor: '#0B2447',
-                '&:hover': {
-                  backgroundColor: '#005ea8',
+                color: "white",
+                display: "block",
+                backgroundColor: "#0B2447",
+                "&:hover": {
+                  backgroundColor: "#005ea8",
                 },
               }}
             >
               Borrow money
             </Button>
             <Button
-             onClick={openBuycoin}
+              onClick={openBuycoin}
               sx={{
                 my: 2,
-                color: 'white',
-                display: 'block',
-                backgroundColor: '#0B2447',
-                '&:hover': {
-                  backgroundColor: '#005ea8',
+                color: "white",
+                display: "block",
+                backgroundColor: "#0B2447",
+                "&:hover": {
+                  backgroundColor: "#005ea8",
                 },
               }}
             >
@@ -203,33 +202,62 @@ function ResponsiveAppBar() {
             </Button>
           </Box>
 
-          <Box sx={{ flexGrow: 0, display: { xs: '10', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 0, display: { xs: "10", md: "flex" } }}>
+            <a href="http://localhost:8080/blocks">
+              <Button
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  backgroundColor: "#0B2447",
+                  "&:hover": {
+                    backgroundColor: "#005ea8",
+                  },
+                }}
+              >
+                View Blocks
+              </Button>
+            </a>
+            <a href="http://localhost:8080/transaction">
+              <Button
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  backgroundColor: "#0B2447",
+                  "&:hover": {
+                    backgroundColor: "#005ea8",
+                  },
+                }}
+              >
+                View transactions
+              </Button>
+            </a>
             <Button
               onClick={openLend}
               sx={{
                 my: 2,
-                color: 'white',
-                display: 'block',
-                backgroundColor: '#0B2447',
-                '&:hover': {
-                  backgroundColor: '#005ea8',
+                color: "white",
+                display: "block",
+                backgroundColor: "#0B2447",
+                "&:hover": {
+                  backgroundColor: "#005ea8",
                 },
               }}
             >
               Dashboard
             </Button>
             <Button
-             onClick={openWork}
+              onClick={openWork}
               sx={{
                 my: 2,
-                color: 'white',
-                display: 'block',
-                backgroundColor: '#0B2447',
-                '&:hover': {
-                  backgroundColor: '#005ea8',
+                color: "white",
+                display: "block",
+                backgroundColor: "#0B2447",
+                "&:hover": {
+                  backgroundColor: "#005ea8",
                 },
               }}
-            
             >
               How we Work
             </Button>
@@ -237,11 +265,11 @@ function ResponsiveAppBar() {
               onClick={openContact}
               sx={{
                 my: 2,
-                color: 'white',
-                display: 'block',
-                backgroundColor: '#0B2447',
-                '&:hover': {
-                  backgroundColor: '#005ea8',
+                color: "white",
+                display: "block",
+                backgroundColor: "#0B2447",
+                "&:hover": {
+                  backgroundColor: "#005ea8",
                 },
               }}
             >
@@ -253,23 +281,26 @@ function ResponsiveAppBar() {
               </IconButton>
             </Tooltip>
             <Menu
-              sx={{ mt: '45px' }}
+              sx={{ mt: "45px" }}
               id="menu-appbar"
               anchorEl={anchorElUser}
               anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               keepMounted
               transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
+                vertical: "top",
+                horizontal: "right",
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
               <MenuItem>
-                <Typography textAlign="center">User: #ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad</Typography>
+                <Typography textAlign="center">
+                  User:
+                  #ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
+                </Typography>
               </MenuItem>
               <MenuItem onClick={openWallet}>
                 <Typography textAlign="center">Profile</Typography>
